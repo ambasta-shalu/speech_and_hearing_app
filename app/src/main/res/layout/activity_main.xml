@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/et_speech_input"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="30dp"
+        android:hint="Let's Talk"
+        android:visibility="visible"
+        app:endIconDrawable="@drawable/ic_baseline_send_24"
+        app:endIconMode="custom"
+        app:endIconTint="@color/purple_500"
+        app:errorEnabled="true"
+        app:hintTextColor="@color/purple_500"
+        app:startIconDrawable="@drawable/ic_baseline_mic_none_24"
+        app:startIconTint="@color/purple_700">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text|textLongMessage|textMultiLine|textCapSentences" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_speech_output"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="30dp"
+        android:fontFamily="cursive"
+        android:text="Listening..."
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_talk"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btn_listen"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="24dp"
+        android:clickable="true"
+        android:drawablePadding="4dp"
+        android:elevation="4dp"
+        android:focusable="true"
+        android:padding="16dp"
+        android:text="Talk Now"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:cornerRadius="16dp"
+        app:icon="@drawable/ic_baseline_mic_24"
+        app:iconGravity="textStart"
+        app:iconTint="@color/white"
+        app:rippleColor="@color/purple_200" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_listen"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="32dp"
+        android:clickable="true"
+        android:drawablePadding="4dp"
+        android:elevation="4dp"
+        android:focusable="true"
+        android:padding="16dp"
+        android:text="Listen Others"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:cornerRadius="16dp"
+        app:icon="@drawable/ic_baseline_hearing_24"
+        app:iconGravity="textStart"
+        app:iconTint="@color/white"
+        app:rippleColor="@color/purple_200" />
+
+
+</RelativeLayout>
